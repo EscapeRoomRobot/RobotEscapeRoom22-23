@@ -11,7 +11,7 @@
 from time import sleep
 import paho.mqtt.client as mqtt
 # pi_ip_address = '130.215.122.93'
-pi_ip_address = 'mqtt.eclipseprojects.io'   
+pi_ip_address = 'mqtt.eclipseprojects.io'
 
 
 def connect_mqtt() -> mqtt:

@@ -189,7 +189,9 @@ bool simon()
   if (yellowOn == false)
   {
     simonYellow();
-  } else {
+  }
+  else
+  {
     pub("room/puzzle", "2");
     delay(10000);
     // sleep for 10 seconds (place holder)

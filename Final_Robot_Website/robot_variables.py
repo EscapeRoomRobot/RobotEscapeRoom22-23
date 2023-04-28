@@ -22,10 +22,11 @@ pwmR_out = 32       # GPIO12 (PWM0)
 pwmL_out = 33       # GPIO13 (PWM1)
 
 # Other Pins
-servo_pin = 36      # GPIO16 
-led_pin = 11        # GPIO17 
-blacklight_pin = 13 # GPIO27 
+servo_pin = 36      # GPIO16
+led_pin = 11        # GPIO17
+blacklight_pin = 13  # GPIO27
 
 # put pins into list for setup()
 input = [motor_rtxd, motor_rrxd, motor_ltxd, motor_lrxd]
-output = [motor_rA, motor_rB, motor_lA, motor_lB, pwmR_out, pwmL_out, servo_pin, led_pin, blacklight_pin]
+output = [motor_rA, motor_rB, motor_lA, motor_lB,
+          pwmR_out, pwmL_out, servo_pin, led_pin, blacklight_pin]

@@ -26,7 +26,8 @@ def connect_mqtt() -> mqtt:
 
 def subscribe(client: mqtt, topic):
     def on_message(client, userdata, msg):
-        print("on_message | topic: "+msg.topic+" \tmsg: "+str(msg.payload.decode("utf-8")))
+        print("on_message | topic: "+msg.topic +
+              " \tmsg: "+str(msg.payload.decode("utf-8")))
 
     client.subscribe(topic)
     client.on_message = on_message
@@ -37,7 +38,7 @@ def mqtt_sub():
     subscribe(client, "robot/test")
     subscribe(client, "robot/aruco")
     subscribe(client, "robot/function")
-    subscribe(client, "robot/puzzle") 
+    subscribe(client, "robot/puzzle")
     subscribe(client, "website/test")
     subscribe(client, "website/status")
     subscribe(client, "room/test")

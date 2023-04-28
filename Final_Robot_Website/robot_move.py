@@ -79,6 +79,8 @@ def turn_right():  # move robot right
 servo/camera home position: duty = 2.5 
 servo/camera looking straight up (90/neutral): duty = 7.5 
 """
+
+
 def servo_contraint(duty):
     if (duty < 2.5):
         duty = 2.5
