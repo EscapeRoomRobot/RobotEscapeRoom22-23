@@ -10,5 +10,7 @@ Room.ino: file for the room code. </br>
 ## Running the Room 
 -- Connect the board to power/computer. </br>
 -- Run the code in Arduino IDE. </br>
--- Select "Espressif ESP32-WROOM-32" as the board. </br>
--- Select your own port. </br> 
+-- Select "ESP32 Dev Module" as the board. </br>
+-- Select your own port. </br></br>
+-- You will need to manually download some libraries in order to run the code: </br>
+-- Sketch -> Include Library -> Manage Libraries... -> Type PubSub in Search field -> Install "PubSubClient by Nick O'Leary" </br>

@@ -220,6 +220,11 @@ def settings():
 @app.route('/win')
 def win():
     return render_template('win.html')
+
+
+@app.route('/manualv2')
+def manualv2():
+    return render_template('manualv2.html')
 # --- Flask templates Ends ---
 
 

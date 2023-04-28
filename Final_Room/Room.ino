@@ -4,6 +4,7 @@
  *  The API is almost the same as with the WiFi Shield library,
  *  the most obvious difference being the different file you need to include:
  */
+
 #include "WiFi.h"
 #include <PubSubClient.h>
 // #include "analogWrite.h"
@@ -188,9 +189,12 @@ bool simon()
   if (yellowOn == false)
   {
     simonYellow();
+  } else {
+    pub("room/puzzle", "2");
+    delay(10000);
+    // sleep for 10 seconds (place holder)
   }
   // Serial.println("END YELLOW");
-  pub("room/puzzle", "2");
   // door();
 
   return true;
@@ -199,10 +203,8 @@ bool simon()
 void loop()
 {
   // Serial.println("HIHI");
-  pub("room/puzzle", "1");
   check_connection();
   simon();
-  pub("room/puzzle", "2");
   delay(100);
   // door();
 
@@ -230,6 +232,7 @@ void reconnect()
     {
       // Write ALL Subscribers
       sub("website/status");
+      pub("room/puzzle", "1");
     }
     else
     {
